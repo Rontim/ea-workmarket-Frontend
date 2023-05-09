@@ -1,38 +1,258 @@
-.App {
-  text-align: center;
+body {
+    background-color: #f7f7f7;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #fff;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.1);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.logo img {
+    height: 50px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
-.App-link {
-  color: #61dafb;
+li:not(:last-child) {
+    margin-right: 1rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+li a:hover {
+    color: #ff6600;
+}
+
+.account--info {
+    display: flex;
+    align-items: center;
+}
+
+.nav--button {
+    border: 1px solid #e6e6e6;
+    border-radius: 4px;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+    background-color: #fff;
+    color: #333;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.nav--button:hover {
+    background-color: #ff6600;
+}
+
+.nav--button:hover a {
+    color: #333;
+}
+
+.nav--button--primary {
+    background-color: #ff6600;
+    color: #fff;
+    border-color: #ff6600;
+}
+
+.nav--button--primary:hover {
+    border: 1px solid #e6e6e6;
+    border-radius: 4px;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+    background-color: #fff;
+    color: #333;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 890px) {
+    .nav--button a {
+        font-size: 1rem;
+        font-weight: 600;
+        color: #333;
+        text-decoration: none;
+    }
+    .nav--humberger {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        margin-bottom: 1rem;
+    }
+    .nav--menu {
+        margin-left: 1rem;
+        font-size: 1rem;
+        font-weight: 600;
+        color: #333;
+    }
+    .nav--barger {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 24px;
+        width: 24px;
+    }
+    .nav--bars {
+        display: block;
+        cursor: pointer;
+        margin-top: 1vh;
+        margin-bottom: 1vh;
+    }
+    .bars {
+        display: block;
+        width: 27px;
+        height: 3px;
+        margin: 5px auto;
+        -webkit-transition: all 1s ease-in-out;
+        transition: transform 1s ease-in-out;
+        background-color: #000000;
+        border-radius: 5px;
+    }
+    .nav--bars.active .bars:nth-of-type(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+    .nav--bars.active .bars:nth-of-type(2) {
+        opacity: 0;
+    }
+    .nav--bars.active .bars:nth-of-type(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
+    .menu {
+        position: fixed;
+        top: 16%;
+        left: -100%;
+        width: 40%;
+        height: 100%;
+        background-color: #fff;
+        transition: all 1s ease;
+    }
+    .menu.active {
+        left: 0;
+    }
+    .menu ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        flex-direction: column;
+    }
+    .menu li {
+        padding: 10px;
+    }
+    .menu li a {
+        color: #000;
+        text-decoration: none;
+    }
+    .menu.active li {
+        margin-bottom: 1rem;
+        display: flex;
+        flex-direction: column;
+    }
+    .menu a {
+        font-size: 1rem;
+        font-weight: 600;
+        color: #333;
+        text-decoration: none;
+    }
+    .menu a:hover {
+        color: #ff6600;
+    }
+    .account--info {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+
+/* Home */
+
+
+/* Home component styles */
+
+.home {
+    padding-left: 5%;
+}
+
+.home--banner {
+    background-image: url(../src/icons/pexels-sora-shimazaki-5673488.jpg);
+    background-position: right;
+    background-size: 40% 100%;
+    background-repeat: no-repeat;
+    margin-top: 0;
+    height: 60%;
+}
+
+.home--banner .home--banner--content {
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
+    width: 50%;
+}
+
+#features {
+    padding: 80px 0;
+}
+
+#features h2 {
+    font-size: 40px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+/* Feature component styles */
+
+.col-md-4 {
+    flex-basis: 33.33%;
+    margin-bottom: 30px;
+    height: 250px;
+}
+
+.feature-item {
+    text-align: center;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.feature-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.feature-icon {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.feature-title {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.feature-description {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #888;
 }
