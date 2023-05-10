@@ -1,6 +1,7 @@
 import { NavLink } from "react-router-dom";
 import React from "react";
 import logo from "../logo/logo-no-background.png";
+import Login from "./Login";
 
 export default function Nav() {
   const [isMobile, setIsMobile] = React.useState(false);
@@ -32,9 +33,7 @@ export default function Nav() {
           </ul>
           <ul className="account--info">
             <li>
-              <button className="nav--button">
-                <NavLink to="/login">Log In</NavLink>
-              </button>
+              <Login />
             </li>
             <li>
               <button className="nav--button nav--button--primary">
@@ -67,9 +66,7 @@ export default function Nav() {
             </ul>
             <ul className="account--info">
               <li>
-                <button className="nav--button">
-                  <NavLink to="/login">Log In</NavLink>
-                </button>
+                <Login />
               </li>
               <li>
                 <button className="nav--button nav--button--primary">
