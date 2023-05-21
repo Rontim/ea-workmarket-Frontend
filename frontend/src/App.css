@@ -7,12 +7,14 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
-    background-color: #fff;
+    background-color: #8D25AF;
     box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.1);
+    /* color: #fff; */
 }
 
 .logo img {
     height: 50px;
+    width: 200px;
 }
 
 ul {
@@ -28,13 +30,13 @@ li:not(:last-child) {
 
 li a {
     text-decoration: none;
-    color: #333;
+    color: #fff;
     font-weight: 600;
     font-size: 1rem;
 }
 
 li a:hover {
-    color: #ff6600;
+    color: #1E0D34;
 }
 
 .account--info {
@@ -63,9 +65,9 @@ li a:hover {
 }
 
 .nav--button--primary {
-    background-color: #ff6600;
-    color: #fff;
-    border-color: #ff6600;
+    /* background-color: #ff6600; */
+    /* color: #fff; */
+    /* border-color: #ff6600; */
 }
 
 .nav--button--primary:hover {
@@ -186,7 +188,7 @@ li a:hover {
 }
 
 .home--banner {
-    background-image: url(../src/icons/pexels-sora-shimazaki-5673488.jpg);
+    background-image: url(/home/eddie/Desktop/projects/EAWORKMARKET/ea-workmarket-Frontend/frontend/src/Assets/icons/pexels-sora-shimazaki-5673488.jpg);
     background-position: right;
     background-size: 40% 100%;
     background-repeat: no-repeat;

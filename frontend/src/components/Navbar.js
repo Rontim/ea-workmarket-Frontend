@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 import React from "react";
-import logo from "../logo/logo-no-background.png";
+import logo from "../Assets/logo/logo-no-background.png";
 import Login from "./Login";
 
 export default function Nav() {
@@ -21,26 +21,36 @@ export default function Nav() {
       {!isMobile ? (
         <nav>
           <div class="logo">
-            <img src={logo} alt="EA Workmarket" srcset="" />
+            <img src={logo} alt="EA Workmarket" srcset="" width='50'/>
           </div>
-          <ul>
-            <li>
-              <NavLink to="/">Home</NavLink>
-            </li>
-            <li>
-              <NavLink to="/learn">Learn About Us</NavLink>
-            </li>
-          </ul>
+          <div>
+            <ul>
+              <li>
+                <NavLink to="/">Home</NavLink>
+              </li>
+              <li>
+                <NavLink to="/learn">About Us</NavLink>
+              </li>
+              <li>
+                <NavLink to="/#">Features</NavLink>
+              </li>
+              <li>
+                <NavLink to="#">Testimonials</NavLink>
+              </li>
+            </ul>
+          </div>
+          <div>
           <ul className="account--info">
             <li>
               <Login />
             </li>
             <li>
-              <button className="nav--button nav--button--primary">
+              <button className="custom-button">
                 <NavLink to="/signup">Get Started</NavLink>
               </button>
             </li>
-          </ul>
+            </ul>
+            </div>
         </nav>
       ) : (
         <nav>

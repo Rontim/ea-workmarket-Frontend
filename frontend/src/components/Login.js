@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Modal, Button, Form } from "react-bootstrap";
-
+import '../components/login.css'
 const Login = ({ login }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -23,7 +23,7 @@ const Login = ({ login }) => {
 
   return (
     <>
-      <Button variant="primary" onClick={handleShow}>
+      <Button className="custom-button" onClick={handleShow}>
         Login
       </Button>
 
