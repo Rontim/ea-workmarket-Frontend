@@ -20,3 +20,30 @@
     transition: 500ms ease-in-out;
     border: none;
 }
+
+/*Info section*/
+/* .info-steps{
+    position: absolute;
+} */
+.account-illustration{
+    border: 3px solid #710f92;
+    border-radius: 2em;
+    position: relative;
+    
+}
+
+.line1{
+position: absolute;
+top:-40%;
+right: -100%;
+}
+.number1{
+    position: absolute;
+    top:50%;
+    right: -90%;
+}
+.line4{
+position: absolute;
+top: 50%;
+width: 63%;
+}
