@@ -1,23 +1,26 @@
-:root{
-    --primary-color:#1E0D34;
-    --primary-violet:#710f92;
-    --white:#fff;
-    --black:#000;
+:root {
+  --primary-color: #1e0d34;
+  --primary-violet: #710f92;
+  --white: #fff;
+  --black: #000;
 }
 
 body {
-    background-color:var(--primary-color) !important;
-    font-family: 'Inter', sans-serif;
-    color: var(--white) !important;
+  background-color: var(--primary-color) !important;
+  font-family: "Inter", sans-serif;
+  color: var(--white) !important;
 }
-nav{
-    background-color: var(--primary-violet);
-    color: var(--white);
+nav {
+  background-color: var(--primary-violet);
+  color: var(--white);
+  position: sticky;
+  top: 0%;
+  left: 0%;
 }
-.custom-button{
-    background-color: #1e0d34;
-    color: white;
-    padding: .5em 1em;
-    border-radius: 3rem;
-    border: none;
+.custom-button {
+  background-color: #1e0d34;
+  color: white;
+  padding: 0.5em 1em;
+  border-radius: 3rem;
+  border: none;
 }

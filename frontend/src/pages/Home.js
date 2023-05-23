@@ -15,6 +15,26 @@ const Home = () => {
         </p>
       </div>
       <button className="hero-button px-3 py-2 my-4" onClick={() => <Navigate to="/learn" />}>Learn More</button>
+      <div className="hero-heading-text my-5">
+        <h1 className="fs-1">EA Workmarket: Connecting Businesses and Freelancers</h1>
+        </div>
+      <div className="hero-paragraph" >
+        <p>
+          Streamline your project management process with East Africa
+          Workmarket's Platform conncecting businesses with top freelancers
+        </p>
+      </div>
+      <button className="hero-button px-3 py-2 my-4" onClick={() => <Navigate to="/learn" />}>Learn More</button>
+      <div className="hero-heading-text my-5">
+        <h1 className="fs-1">EA Workmarket: Connecting Businesses and Freelancers</h1>
+        </div>
+      <div className="hero-paragraph" >
+        <p>
+          Streamline your project management process with East Africa
+          Workmarket's Platform conncecting businesses with top freelancers
+        </p>
+      </div>
+      <button className="hero-button px-3 py-2 my-4" onClick={() => <Navigate to="/learn" />}>Learn More</button>
     </div>
     
   );
