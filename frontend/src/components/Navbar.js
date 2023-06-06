@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 import React from "react";
 import logo from "../Assets/logo/logo-no-background.png";
 import Login from "./Login";
-import "../components/Navbar.css";
+import "../components/css/Navbar.css";
 
 const NavigationBar = () => {
   return (
