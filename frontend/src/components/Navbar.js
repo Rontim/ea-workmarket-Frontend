@@ -2,97 +2,89 @@ import { NavLink } from "react-router-dom";
 import React from "react";
 import logo from "../Assets/logo/logo-no-background.png";
 import Login from "./Login";
+import "../components/css/Navbar.css";
 
-export default function Nav() {
-  const [isMobile, setIsMobile] = React.useState(false);
-  const [menuOption, setMenuOption] = React.useState(false);
-
-  const handleResize = React.useCallback(() => {
-    setIsMobile(window.innerWidth < 890);
-  }, []);
-
-  React.useEffect(() => {
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, [handleResize]);
-
+const NavigationBar = () => {
   return (
-    <div>
-      {!isMobile ? (
-        <nav>
-          <div class="logo">
-            <img src={logo} alt="EA Workmarket" srcset="" width='50'/>
-          </div>
-          <div>
-            <ul>
-              <li>
-                <NavLink to="/">Home</NavLink>
-              </li>
-              <li>
-                <NavLink to="/learn">About Us</NavLink>
-              </li>
-              <li>
-                <NavLink to="/#">Features</NavLink>
-              </li>
-              <li>
-                <NavLink to="#">Testimonials</NavLink>
-              </li>
-            </ul>
-          </div>
-          <div>
-          <ul className="account--info">
-            <li>
-              <Login />
-            </li>
-            <li>
-              <button className="custom-button">
-                <NavLink to="/signup">Get Started</NavLink>
-              </button>
-            </li>
-            </ul>
-            </div>
-        </nav>
-      ) : (
-        <nav>
-          <div
-            className="nav--humberger"
-            onClick={() => setMenuOption(!menuOption)}
-          >
-            <div className={menuOption ? "nav---bars active" : "nav--bars"}>
-              <span className="bars"></span>
-              <span className="bars"></span>
-              <span className="bars"></span>
-            </div>
-            <p className="nav--menu">Menu</p>
-          </div>
-          <div className={menuOption ? "menu active" : "menu"}>
-            <ul>
-              <li>
-                <NavLink to="/">Home</NavLink>
-              </li>
-              <li>
-                <NavLink to="/learn">Learn About Us</NavLink>
-              </li>
-            </ul>
-            <ul className="account--info">
-              <li>
-                <Login />
-              </li>
-              <li>
-                <button className="nav--button nav--button--primary">
-                  <NavLink to="/signup">Get Started</NavLink>
-                </button>
-              </li>
-            </ul>
-          </div>
-          <div className="logo">
-            <img src={logo} alt="EA Workmarket" srcset="" />
-          </div>
-          <button className="nav--button">
-            <NavLink to="/login">Log In</NavLink>
-          </button>
-        </nav>
-      )}
-    </div>
+    <nav className="d-flex justify-content-between align-items-center py-3 px-2">
+      <div class="logo">
+        <img src={logo} alt="EA Workmarket" srcset="" width="200" />
+      </div>
+      <div>
+        <ul className="nav-middle d-flex justify-content-around align-items-center">
+          <li>
+            <NavLink
+              to="/"
+              style={{ textDecoration: "none", color: "white" }}
+              onMouseEnter={(e) => {
+                e.target.style.color = "#1E0D34";
+             
+              }}
+              onMouseLeave={(e) => {
+                e.target.style.color = "white";
+                
+              }}
+            >
+              Home
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/learn"
+              style={{ textDecoration: "none", color: "white" }}
+              onMouseEnter={(e) => {
+                e.target.style.color = "#1E0D34";
+             
+              }}
+              onMouseLeave={(e) => {
+                e.target.style.color = "white";
+                
+              }}
+            >
+              About Us
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/#" style={{ textDecoration: "none", color: "white" }} onMouseEnter={(e) => {
+              e.target.style.color = "#1E0D34";
+           
+            }}
+            onMouseLeave={(e) => {
+              e.target.style.color = "white";
+              
+            }}>
+              Features
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="#" style={{ textDecoration: "none", color: "white" }} onMouseEnter={(e) => {
+              e.target.style.color = "#1E0D34";
+           
+            }}
+            onMouseLeave={(e) => {
+              e.target.style.color = "white";
+              
+            }}>
+              Testimonials
+            </NavLink>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <ul className=" nav-end d-flex align-items-center">
+          <li>
+            <Login />
+          </li>
+          <li>
+            <button className="custom-button">
+              
+                Get Started
+      
+            </button>
+          </li>
+        </ul>
+      </div>
+    </nav>
   );
-}
+};
+export default NavigationBar;
