@@ -1,0 +1,12 @@
+nav{
+  z-index: 1;
+}
+.nav-middle > li,
+.nav-end > li {
+  list-style-type: none;
+  padding-left: 1em;
+}
+.nav-middle > li:hover {
+  color: #1e0d34;
+  cursor: pointer;
+}

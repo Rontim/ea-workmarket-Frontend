@@ -1,0 +1,60 @@
+
+/*Info section*/
+/* .info-steps{
+    position: absolute;
+} */
+.account-illustration{
+    border: 3px solid #710f92;
+    border-radius: 2em;
+    position: relative;
+    
+}
+
+.circle-line1{
+position: absolute;
+top:-38%;
+right: -97%;
+}
+.step1{
+    position: absolute;
+    top:52%;
+    right: -90%;
+}
+.diamond-line-left{
+position: absolute;
+top: 50%;
+width: 63%;
+}
+/* .account-illustration{
+    position: relative;
+} */
+.line2{
+    position: absolute;
+    left: -65%;
+    top: -45%;
+}
+.step2{
+    position: absolute;
+    left: -75%;
+    top: 40%;
+}
+.diamond-line-right{
+    position: absolute;
+    left: -50%;
+    top: 40%;
+}
+.last-straight-line{
+    position:absolute ;
+    right: -105%;
+    top: -57%;
+
+}
+.step3{
+    position: absolute;
+    left: 184%;
+    top: 27%;
+}
+.last-diamond-line-left{
+    position: absolute;
+    top: 27%;
+}
