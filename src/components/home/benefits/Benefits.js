@@ -1,12 +1,15 @@
 import React from "react";
-import { Image } from "react-bootstrap";
+import BenefitsCard from "../../common/benefitscard/beneitsCard";
+import { benefits } from "../../../data/features";
 
 const Benefits = () => {
   return (
     <div className="container">
-      <hr className="border opacity-75"/>
-      <div>This are the cards</div>
-      <hr></hr>
+      <hr className="horizontal-line" />
+      <div>
+        <BenefitsCard items={benefits} />
+      </div>
+      <hr className="horizontal-line" />
     </div>
   );
 };
