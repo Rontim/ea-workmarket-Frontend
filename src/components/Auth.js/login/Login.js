@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./login.css"
 import { Modal, Form } from "react-bootstrap";
 const Login = ({ login }) => {
   const [email, setEmail] = useState("");
