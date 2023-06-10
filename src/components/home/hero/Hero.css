@@ -1,5 +1,5 @@
 .hero-section{
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(../../Assets/design/handshake.jpg) no-repeat center center/cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(../../../Assets/design/handshake.jpg) no-repeat center center/cover;
     height: 70vh;
     text-align: center;
    

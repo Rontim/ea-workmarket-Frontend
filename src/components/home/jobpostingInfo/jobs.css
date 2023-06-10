@@ -1,0 +1,17 @@
+.juscard{
+    width: 13rem;
+    border: 5px solid #710f92;
+}
+.job-step1{
+    height: 4rem;
+    width: 4rem;
+    border: 5px solid #710f92;
+
+}
+.custom-button{
+    background-color: #710f92 !important;
+    color: white !important;
+}
+.step-wise{
+    border: 5px solid #710f92;
+}
