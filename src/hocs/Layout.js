@@ -1,4 +1,4 @@
-import NavigationBar from "../components/Navbar";
+import NavigationBar from "../components/common/navbar/Navbar";
 
 function Layout(props) {
   return (

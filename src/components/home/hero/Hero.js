@@ -1,6 +1,6 @@
 import React from 'react';
 import { Navigate } from "react-router-dom";
-import "../components/css/Hero.css";
+import "./Hero.css";
 
 
 const Hero = () => {

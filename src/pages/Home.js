@@ -1,18 +1,20 @@
 import React from "react";
 import "./Home.css";
-import Hero from "../components/Hero";
-import JobPosterInfo from "../components/JobPosterInfo";
+import Hero from '../components/home/hero/Hero'
+import JobPosterInfo from "../components/home/jobpostingInfo/JobPosterInfo";
+import Explore from "../components/home/explore/Explore";
+import Benefits from "../components/home/benefits/Benefits";
 const Home = () => {
   const createAccount = require("../Assets/design/createAccount.png");
   const appSearching = require("../Assets/design/searchapp.png");
   const completeProcess = require("../Assets/design/completesignup.png");
-  const CircleLine1 = require("../Assets/lines/Line 1.png");
-  const Step1 = require("../Assets/lines/Step1.png");
-  const diamondLineLeft = require("../Assets/lines/Line 4.png");
-  const StraightLine2 = require("../Assets/lines/Line 2.png");
-  const Step2 = require("../Assets/lines/Step2.png");
-  const diamondLineRight = require("../Assets/lines/Line 3.png");
-  const Step3 = require("../Assets/lines/Step3.png");
+  // const CircleLine1 = require("../Assets/lines/Line 1.png");
+  // const Step1 = require("../Assets/lines/Step1.png");
+  // const diamondLineLeft = require("../Assets/lines/Line 4.png");
+  // const StraightLine2 = require("../Assets/lines/Line 2.png");
+  // const Step2 = require("../Assets/lines/Step2.png");
+  // const diamondLineRight = require("../Assets/lines/Line 3.png");
+  // const Step3 = require("../Assets/lines/Step3.png");
   return (
     <div>
       <Hero />
@@ -95,6 +97,8 @@ const Home = () => {
         </div>
       </div>
       <JobPosterInfo />
+      <Explore />
+      <Benefits/>
     </div>
   );
 };

@@ -1,7 +1,7 @@
 import React from "react";
-import "./css/jobs.css";
+import "./jobs.css";
 const JobPosterInfo = () => {
-  const step1image = require("../Assets/lines/Step1.png");
+  const step1image = require("../../../Assets/lines/Step1.png");
   return (
     <div className="container my-5">
       <div>
