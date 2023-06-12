@@ -4,6 +4,8 @@ import Hero from '../components/home/hero/Hero'
 import JobPosterInfo from "../components/home/jobpostingInfo/JobPosterInfo";
 import Explore from "../components/home/explore/Explore";
 import Benefits from "../components/home/benefits/Benefits";
+import CallToAction from "../components/home/call-to-action/CallToAction";
+import ReadyAction from "../components/home/ready-action/ReadyAction";
 const Home = () => {
   const createAccount = require("../Assets/design/createAccount.png");
   const appSearching = require("../Assets/design/searchapp.png");
@@ -98,7 +100,9 @@ const Home = () => {
       </div>
       <JobPosterInfo />
       <Explore />
-      <Benefits/>
+      <Benefits />
+      <CallToAction />
+      <ReadyAction/>
     </div>
   );
 };
