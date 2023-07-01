@@ -1,6 +1,8 @@
+import React from "react";
 import { useState } from "react";
-import "./login.css"
+import "./login.css";
 import { Modal, Form } from "react-bootstrap";
+
 const Login = ({ login }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -27,15 +29,15 @@ const Login = ({ login }) => {
         Login
       </button>
 
-      <Modal show={show} onHide={handleClose}>
+      <Modal show={show} onHide={handleClose} className="modal-container">
         <Modal.Header closeButton>
-          <Modal.Title>Login</Modal.Title>
+          <Modal.Title style={{ color: "black" }}>Login</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           {/*error && <div className="error">{error}</div>*/}
           <Form onSubmit={handleLogin}>
             <Form.Group controlId="email">
-              <Form.Label>Email:</Form.Label>
+              <Form.Label style={{ color: "black" }}>Email:</Form.Label>
               <Form.Control
                 type="email"
                 value={email}
@@ -44,20 +46,19 @@ const Login = ({ login }) => {
             </Form.Group>
 
             <Form.Group controlId="password">
-              <Form.Label>Password:</Form.Label>
+              <Form.Label style={{ color: "black" }}>Password:</Form.Label>
               <Form.Control
                 type="password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
               />
             </Form.Group>
-
-            <button className="custom-button mt-1" type="submit">
-              Login
-            </button>
           </Form>
         </Modal.Body>
         <Modal.Footer>
+          <button className="custom-button mt-1" type="submit">
+            Login
+          </button>
           <button className="custom-button" onClick={handleClose}>
             Close
           </button>

@@ -1,8 +1,9 @@
 import { NavLink } from "react-router-dom";
 import React from "react";
 import logo from "../../../Assets/logo/logo-no-background.png";
-import Login from "../../Auth.js/login/Login";
+import Login from "../../Auth/login/Login";
 import "./Navbar.css";
+import Signup from "../../Auth/signup/Signup";
 
 const NavigationBar = () => {
   return (
@@ -76,11 +77,7 @@ const NavigationBar = () => {
             <Login />
           </li>
           <li>
-            <button className="custom-button">
-              
-                Get Started
-      
-            </button>
+            <Signup/>
           </li>
         </ul>
       </div>
