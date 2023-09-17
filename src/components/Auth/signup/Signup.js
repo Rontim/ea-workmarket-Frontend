@@ -4,9 +4,15 @@ import "./signup.css";
 import { Modal, Form } from "react-bootstrap";
 
 const Signup = () => {
-const [user,setUser]=useState({
-   email:'', username:'', first_name:'', last_name:'', password:'',confirmPassword:''
-  })
+  const [user, setUser] = useState({
+    email: "",
+    username: "",
+    first_name: "",
+    last_name: "",
+    password: "",
+    re_password: "",
+  });
+
   // const [error, setError] = useState(null);
   const [show, setShow] = useState(false);
 
@@ -20,18 +26,20 @@ const [user,setUser]=useState({
 
   const handleSignup = (event) => {
     event.preventDefault();
-   
+  };
+  const handleChange = (e) => {
+    setUser({ ...user, [e.target.name]: e.target.value });
   };
 
   return (
     <>
       <button className="custom-button" onClick={handleShow}>
-       Get Started
+        Get Started
       </button>
 
       <Modal show={show} onHide={handleClose} className="modal-container">
         <Modal.Header closeButton>
-          <Modal.Title style={{ color: "black" }}></Modal.Title>
+          <Modal.Title style={{ color: "black" }}>Create An Account</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           {/*error && <div className="error">{error}</div>*/}
@@ -40,24 +48,33 @@ const [user,setUser]=useState({
               <Form.Label style={{ color: "black" }}>Email:</Form.Label>
               <Form.Control
                 type="email"
-                value={email}
-                onChange={(e) => setUser({...user,'email':e.target.value})}
+                name="email"
+                value={user.email}
+                onChange={
+                  handleChange
+                }
               />
             </Form.Group>
             <Form.Group controlId="first_name">
               <Form.Label style={{ color: "black" }}>First Name:</Form.Label>
               <Form.Control
                 type="text"
-                value={first_name}
-                onChange={(e) => setUser({...user,'first_name':e.target.value})}
+                name="first_name"
+                value={user.first_name}
+                onChange={
+                  handleChange
+                }
               />
             </Form.Group>
             <Form.Group controlId="last_name">
               <Form.Label style={{ color: "black" }}>Last Name:</Form.Label>
               <Form.Control
                 type="text"
-                value={last_name}
-                onChange={(e) => setUser({...user,'last_name':e.target.value})}
+                name="last_name"
+                value={user.last_name}
+                onChange={
+                  handleChange
+                }
               />
             </Form.Group>
 
@@ -65,16 +82,23 @@ const [user,setUser]=useState({
               <Form.Label style={{ color: "black" }}>Password:</Form.Label>
               <Form.Control
                 type="password"
-                value={password}
-                onChange={(e) => setUser({...user,'password':e.target.value})}
+                value={user.password}
+                onChange={
+                  handleChange
+                }
               />
             </Form.Group>
             <Form.Group controlId="new_password">
-              <Form.Label style={{ color: "black" }}>Confirm Password:</Form.Label>
+              <Form.Label style={{ color: "black" }}>
+                Confirm Password:
+              </Form.Label>
               <Form.Control
                 type="password"
-                value={password}
-                onChange={(e) => setUser({...user,'new_password':e.target.value})}
+                name="re_password"
+                value={user.re_password}
+                onChange={
+                  handleChange
+                }
               />
             </Form.Group>
           </Form>
